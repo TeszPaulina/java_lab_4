@@ -8,7 +8,6 @@ public class Main {
         samochod1.podsumowanie(15);
 
         System.out.println();
-
         /* Deklarujemy objekt samochod2 typem interfejsu Pojazd - bardziej elastyczne rozwiązanie */
         Pojazd samochod2 = new SamochodOsobowy();
         samochod2.setPojazd("Fiat");
