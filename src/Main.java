@@ -6,4 +6,5 @@ public class Main {
         System.out.println(dom.getPowierzchnia(87.5, 66.3));
         dom.wiadomosc();
     }
+
 }

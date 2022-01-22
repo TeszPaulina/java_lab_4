@@ -3,4 +3,5 @@ public class Dom extends Budynek {
     double getPowierzchnia(double parter, double pietro) {
         return parter + pietro;
     }
+
 }

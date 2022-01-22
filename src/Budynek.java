@@ -6,4 +6,5 @@ abstract class Budynek {
     public void wiadomosc() {   //zwykła metoda
         System.out.println("To jest klasa abstrakcyjna");
     }
+
 }
