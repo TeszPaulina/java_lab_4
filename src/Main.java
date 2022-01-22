@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
 
         /* przykład 4. Blok try catch */
-
         /* Przykład ArithmeticException */
         /* w bloku try spradzamy poporawność działania arytmetycznego */
         try {
