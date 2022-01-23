@@ -1,16 +1,18 @@
+import enums.PracownikWydzial;
+import enums.StudentKierunek;
+import classes.Student;
+import classes.Pracownik;
 
 public class Main {
     public static void main(String[] args) {
 
         /* zad.1
-        a) napisać interfejs CzlowiekI
-        b) zadeklarować 2 metody
-
-        c) napisać interfejs StudentI który dziedziczy po interfejsie CzlowiekI
-        d) zadeklarować 3 metody
-
-        e) napisać interfejs PracownikI który dziedziczy po interfejsie CzlowiekI
-        f) zadeklarować 3 metody
+         a) napisać interfejs CzlowiekI
+         b) zadeklarować 2 metody
+         c) napisać interfejs StudentI który dziedziczy po interfejsie CzlowiekI
+         d) zadeklarować 3 metody
+         e) napisać interfejs PracownikI który dziedziczy po interfejsie CzlowiekI
+         f) zadeklarować 3 metody
          */
 
         /* zad.2
@@ -25,6 +27,7 @@ public class Main {
         b) stworzyć 2 objekty typu Pracownik i uzupełnić wszystkie pola
         c) wypisać metody toString() wszystkich objektów
 
+
         zad.4 - Dla chętnych
         a) stworzyć klasę Kierownik która będzie implementować interfejs PracownikI,
         b) zaimplementować wszystkie metody, i stworzyć pola
@@ -38,5 +41,26 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
+
+        Student student = new Student(55, 1.58, 5, 4, 5, 600, 500);
+        student.czlowiekInformacje("Klaudia", "Nowicka", 22);
+        student.kierunek(StudentKierunek.FIZYKA);
+        System.out.println(student.toString());
+
+        Student student2 = new Student(67, 1.78, 3, 4, 5, 500, 400);
+        student2.czlowiekInformacje("Marcin", "Jacki", 21);
+        student2.kierunek(StudentKierunek.PSYCHOLOGIA);
+        System.out.println(student2.toString());
+
+        Pracownik pracownik = new Pracownik(74, 1.75, 3700, 6);
+        pracownik.czlowiekInformacje("Adam", "Nowak", 35);
+        pracownik.wydzial(PracownikWydzial.MATEMATYKI);
+        System.out.println(pracownik.toString());
+
+        Pracownik pracownik2 = new Pracownik(87, 1.95, 4200, 9);
+        pracownik2.czlowiekInformacje("Martyna", "Jakubik", 43);
+        pracownik2.wydzial(PracownikWydzial.PSYCHOLOGII);
+        System.out.println(pracownik2.toString());
+
     }
 }
