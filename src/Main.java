@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 public class Main {
@@ -50,7 +51,48 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
-        System.out.println("Zadanie 2");
+        System.out.println("\nZadanie 2 a)");
+        try {
+            String osoba = null;
+            osoba.toLowerCase();
+        } catch (NullPointerException g) {
+            System.out.println("Błąd, nie mozna wywowac metody toLowerCase() na null!");
+        }
+
+        System.out.println("\nZadanie 2 b)");
+        Scanner scan2 = new Scanner(System.in);
+        System.out.println("Dzielenie calkowite. Wprowadz dwie liczby calkowite: ");
+        int a, b;
+
+        boolean isValueCorrect = false;
+        while (!isValueCorrect) {
+            try {
+                a = Integer.parseInt(scan.next());
+                b = Integer.parseInt(scan.next());
+                isValueCorrect = true;
+                int dzielenie = a / b;
+                System.out.println("a / b = " + a + " / " + b + " = " + dzielenie);
+            } catch (ArithmeticException h) {
+                isValueCorrect = false;
+                System.out.println("Błąd. Nie mozemy dzielic przez 0. Wprowadz poprawne dane.");
+            }
+        }
+
+        System.out.println("\nZadanie 2 c)");
+        try {
+            String napis = null;
+            int liczba = 3;
+            int liczba2 = 0;
+            int dzielenie = liczba / liczba2;
+            napis.toUpperCase();
+            System.out.println("Wszystko poprawnie.");
+        } catch (NullPointerException k) {
+            System.out.println("Błąd, nie mozna wywowac metody toUpperCase() na null!");
+        } catch (ArithmeticException l) {
+            System.out.println("Błąd. Nie mozna dzielic przez 0!");
+        } finally {
+            System.out.println("Koniec programu.");
+        }
 
     }
 }
