@@ -1,15 +1,16 @@
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
         /* zad.1
-        a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
-        b) wprowadzić z klawiatury numer indexu tablicy który chcemy wyświetlić, użyć metody next() --> scan.next();
+       OK a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
+       OK b) wprowadzić z klawiatury numer indexu tablicy który chcemy wyświetlić, użyć metody next() --> scan.next();
         c) zabezpieczyć kod przed wprowadzeniem:
            - za dużej liczby (index > tab.length),
            - wprowadzeniem innego znaku niż liczba,
-        d) użyć metody finally aby wyświetlić komunikat zakończenia programu
+       OK d) użyć metody finally aby wyświetlić komunikat zakończenia programu
         e) wprowadzanie indeksu niech będzie zapętlone do momentu wprowadzenia poprawnego indeksu
 
            PODPOWIEDZI:
@@ -20,8 +21,8 @@ public class Main {
            boolean isIndexCorrect
            white(!isIndexCorrect) {}
         */
-
-
+        int tab[] = {3,5,12,6,1,8};
+        Scanner scan = new Scanner(System.in);
 
         /* zad.2
         a) stworzyć dowolny przykład z NullPonterException,
