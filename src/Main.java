@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
         /* zad.1
-       OK a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
-       OK b) wprowadzić z klawiatury numer indexu tablicy który chcemy wyświetlić, użyć metody next() --> scan.next();
+        a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
+        b) wprowadzić z klawiatury numer indexu tablicy który chcemy wyświetlić, użyć metody next() --> scan.next();
         c) zabezpieczyć kod przed wprowadzeniem:
            - za dużej liczby (index > tab.length),
            - wprowadzeniem innego znaku niż liczba,
-       OK d) użyć metody finally aby wyświetlić komunikat zakończenia programu
+        d) użyć metody finally aby wyświetlić komunikat zakończenia programu
         e) wprowadzanie indeksu niech będzie zapętlone do momentu wprowadzenia poprawnego indeksu
 
            PODPOWIEDZI:
@@ -23,6 +23,28 @@ public class Main {
         */
         int tab[] = {3,5,12,6,1,8};
         Scanner scan = new Scanner(System.in);
+        System.out.println("Wprowadz indeks tablicy: ");
+        int index = -1;
+
+        boolean isIndexCorrect = false;
+        while (!isIndexCorrect) {
+            try {
+                index = Integer.parseInt(scan.next());
+                isIndexCorrect = true;
+                System.out.println("Dobrze, wprowadzony znak jest cyfrą!");
+            } catch (NumberFormatException e) {
+                isIndexCorrect = false;
+                System.out.println("Błąd, wprowadzony znak nie jest cyfrą!");
+            }
+        }
+
+        try {
+            System.out.println("Dobrze, pdales poprawny indeks. tab[" + index + "] = " + tab[index]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Błąd, podales niepoprawny indeks. Powinien byc z zakresu od 0 do " + (tab.length - 1));
+        } finally {
+            System.out.println("Koniec programu.");
+        }
 
         /* zad.2
         a) stworzyć dowolny przykład z NullPonterException,
