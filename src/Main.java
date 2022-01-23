@@ -35,7 +35,7 @@ public class Main {
             try {
                 index = Integer.parseInt(scan.next());
                 isIndexCorrect = true;
-                System.out.println("Dobrze! Wprowadzony znak jest cyfrą i pdales poprawny indeks. tab[" + index + "] = " + tab[index]);
+                System.out.println("Dobrze! Wprowadzony znak jest cyfrą i podales poprawny indeks. tab[" + index + "] = " + tab[index]);
             } catch (NumberFormatException e) {
                 isIndexCorrect = false;
                 System.out.println("Błąd, wprowadzony znak nie jest cyfrą! Wprowadz ponownie: ");
@@ -85,6 +85,7 @@ public class Main {
             int liczba2 = 0;
             int dzielenie = liczba / liczba2;
             napis.toUpperCase();
+            System.out.println(dzielenie);
             System.out.println("Wszystko poprawnie.");
         } catch (NullPointerException k) {
             System.out.println("Błąd, nie mozna wywowac metody toUpperCase() na null!");
