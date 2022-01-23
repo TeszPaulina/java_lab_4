@@ -21,6 +21,9 @@ public class Main {
            boolean isIndexCorrect
            white(!isIndexCorrect) {}
         */
+
+        System.out.println("Ćwiczenie 4");
+        System.out.println("Zadanie 1");
         int tab[] = {3,5,12,6,1,8};
         Scanner scan = new Scanner(System.in);
         System.out.println("Wprowadz indeks tablicy: ");
@@ -31,19 +34,15 @@ public class Main {
             try {
                 index = Integer.parseInt(scan.next());
                 isIndexCorrect = true;
-                System.out.println("Dobrze, wprowadzony znak jest cyfrą!");
+                System.out.println("Dobrze! Wprowadzony znak jest cyfrą i pdales poprawny indeks. tab[" + index + "] = " + tab[index]);
             } catch (NumberFormatException e) {
                 isIndexCorrect = false;
-                System.out.println("Błąd, wprowadzony znak nie jest cyfrą!");
+                System.out.println("Błąd, wprowadzony znak nie jest cyfrą! Wprowadz ponownie: ");
+            } catch (ArrayIndexOutOfBoundsException f) {
+                System.out.println("Błąd, podales niepoprawny indeks. Powinien byc z zakresu od 0 do " +
+                        (tab.length - 1) + ". Wprowadz ponownie: ");
+                isIndexCorrect = false;
             }
-        }
-
-        try {
-            System.out.println("Dobrze, pdales poprawny indeks. tab[" + index + "] = " + tab[index]);
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Błąd, podales niepoprawny indeks. Powinien byc z zakresu od 0 do " + (tab.length - 1));
-        } finally {
-            System.out.println("Koniec programu.");
         }
 
         /* zad.2
@@ -51,6 +50,7 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
+        System.out.println("Zadanie 2");
 
     }
 }
