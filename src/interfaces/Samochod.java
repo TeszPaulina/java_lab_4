@@ -8,4 +8,5 @@ public interface Samochod extends Pojazd, Autor {
     void setPrzebieg(int oryginalny, int odHandlarza);
 
     void setPaliwo(PaliwoEnum paliwo);
+
 }

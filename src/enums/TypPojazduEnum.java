@@ -31,4 +31,5 @@ public enum TypPojazduEnum {
     public String getKlasyfikacja() {
         return klasyfikacja;
     }
+
 }

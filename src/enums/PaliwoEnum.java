@@ -7,4 +7,5 @@ public enum PaliwoEnum {
     OLEJ_OPALOWY,
     HYBRYDOWY,
     PRAD_ELEKTRYCZNY
+
 }

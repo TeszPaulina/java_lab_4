@@ -98,4 +98,5 @@ public class SamochodOsobowy implements Samochod {
                 ", paliwo=" + paliwo +
                 "}\nAutor: " + getAutor();
     }
+
 }

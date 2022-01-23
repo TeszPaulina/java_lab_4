@@ -35,4 +35,5 @@ public class SamochodCiezarowy implements Samochod {
     public void setPaliwo(PaliwoEnum paliwo) {
 
     }
+
 }

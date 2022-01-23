@@ -9,4 +9,5 @@ public interface Pojazd {
 
     void getTypPojazdu(TypPojazduEnum typ);
 
+
 }
